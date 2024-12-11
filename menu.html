@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu and Book Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            background-color: #333;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .menu a:hover {
+            background-color: #555;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .book-container img {
+            width: 150px;
+            height: 200px;
+            cursor: pointer;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .book-container img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- 상단 메뉴 -->
+    <nav class="menu">
+        <a href="home.html">Home</a>
+        <a href="Quiz.html">Quiz</a>
+        <a href="Escape.html">Escape</a>
+    </nav>
+
+    <!-- 도서 이미지 섹션 -->
+    <div class="content">
+        <h1>Recommended Books</h1>
+        <div class="book-container">
+            <img src="cat.jpg" alt="Book 1" onclick="openBookPage('book1.html')">
+            <img src="book2.jpg" alt="Book 2" onclick="openBookPage('book2.html')">
+            <img src="book3.jpg" alt="Book 3" onclick="openBookPage('book3.html')">
+        </div>
+    </div>
+
+    <script>
+        function openBookPage(page) {
+            window.location.href = page; // 도서 상세 페이지로 이동
+        }
+    </script>
+</body>
+</html>
